@@ -15,7 +15,4 @@ export class CompletatiPage implements OnInit {
   ngOnInit(): void {
     this.todosDone = this.todoService.todoDone
   }
-
-
-
 }

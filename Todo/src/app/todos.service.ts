@@ -21,14 +21,17 @@ export class TodosService {
     this.todolist.push({id,title,completed})
   }
 
-  removeTodo(a:any) {
-      this.todolist.filter(i=>i.id !==a.id);
-  }
 
   checkTodo(i:number,obj:Todo){
     this.todolist[i].completed = !this.todolist[i].completed
     this.todoDone.push(obj)
-    console.log(this.todoDone);
+
+  }
+
+  removeTodo(obj:Todo){
+    let index = this.todolist.indexOf(obj);
+    this.todolist.splice(index,1)
+    console.log(this.todolist);
 
   }
 
