@@ -1,0 +1,22 @@
+
+h1 {
+  text-align: center;
+  margin-bottom: 0;
+  span{
+    padding-left: 0.5em;
+    padding: 0.2em 0.7em 0 0.7em;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+  }
+#todos{
+  background-color: #41f4b8;
+}
+#completed {
+  background-color: #ff3e9f;
+}
+}
+.active{
+  color: blue;
+  box-shadow: 3px 10px 5px rgb(156, 113, 113);
+}
+

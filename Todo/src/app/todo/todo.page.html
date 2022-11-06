@@ -1,0 +1,30 @@
+<div id="container">
+  <table>
+    <tbody *ngFor="let item of todos; let i=index">
+      <tr>
+        <td><div class="id">{{item.id}}</div></td>
+        <td>{{item.title}}</td>
+        <td>
+          <input type="checkbox" (click)="checkTodo(i,item)" />
+        </td>
+        <td>
+          <button (click)="removeTodo(item.id)">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="taskEmpty">Ops... non ci sono Task!</p>
+  <div id="insertLabel">
+    <p *ngIf="messageDelay">{{message}}</p>
+    <div>
+      <input
+        type="text"
+        [(ngModel)]="text"
+        (keyup.enter)="addTodo('',text,'')"
+      />
+      <button (click)="addTodo('',text,'')">+</button>
+    </div>
+  </div>
+</div>
